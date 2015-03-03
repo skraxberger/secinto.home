@@ -1,4 +1,108 @@
 /* app css stylesheet */
+.theme-text {
+    background-image: url('/img/secinto-dash.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    display: block;  /* may not need this, but I've found I do */
+    color: #006c7d;
+    font-size: larger;
+}
+
+.theme-text-other {
+    background-image: url('/img/secinto-dash.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    display: block;  /* may not need this, but I've found I do */
+    color: #ffffff;
+    font-size: larger;
+}
+
+#centered-wrapper {
+    padding-left: 0;
+}
+
+.content-box {
+    position: relative;
+    background-color: #ffffff;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gradient-box {
+    position: absolute;
+    height:400px;
+    width: 100%;
+}
+
+.header-box {
+    position: relative;
+    height: 250px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav-box {
+    position: relative;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.negative-container {
+    margin-top: -20px;
+}
+
+.glowing-border {
+    box-shadow: 0 0 10px #055d7a;
+}
+
+.logo-image {
+    margin-top: 50px;
+    margin-left: 30px;
+}
+.blog-image
+{
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.logo-image-other {
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.blog-image-other
+{
+    margin-top: 80px;
+    margin-right: 50px;
+}
+
+
+.secinto-gradient {
+    background: #0b5866; /* Old browsers */
+    background: -moz-linear-gradient(left,  #026266 0%, #00707a 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#026266), color-stop(100%,#00707a)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  #026266 0%,#00707a 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #026266 0%,#00707a 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  #026266 0%,#00707a 100%); /* IE10+ */
+    background: linear-gradient(to right,  #026266 0%,#00707a 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#026266', endColorstr='#00707a',GradientType=1 ); /* IE6-9 */
+}
+
+.secinto-gradient-inverse {
+    background: #0b5866; /* Old browsers */
+    background: -moz-linear-gradient(left,  #00707a 0%, #026266 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#00707a), color-stop(100%,#026266)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  #00707a 0%,#026266 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #00707a 0%,#026266 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  #00707a 0%,#026266 100%); /* IE10+ */
+    background: linear-gradient(to right,  #00707a 0%,#026266 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00707a', endColorstr='#026266',GradientType=1 ); /* IE6-9 */
+}
+
 #wrapper {
     padding-left: 0;
     -webkit-transition: all 0.5s ease;
@@ -9,50 +113,6 @@
 
 #wrapper.toggled {
     padding-left: 250px;
-}
-
-.theme-text {
-    background-image: url('/img/secinto-dash.png');
-    background-repeat: no-repeat;
-    background-position: left center;
-    padding-left: 100px;  /* width of the image plus a little extra padding */
-    display: block;  /* may not need this, but I've found I do */
-    color: #006c7d;
-    font-size: larger;
-}
-
-#centered-wrapper {
-    padding-left: 0;
-}
-
-.gradient-box {
-    height:250px;
-    width: 100%;
-}
-
-.header-box {
-    margin-top: -250px;
-    height: 150px;
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.glowing-border {
-    border: 2px solid #444444;
-    border-radius: 7px;
-}
-
-
-.secinto-gradient {
-    background: #026266; /* Old browsers */
-    background: -moz-linear-gradient(left,  #026266 0%, #00707a 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#026266), color-stop(100%,#00707a)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(left,  #026266 0%,#00707a 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(left,  #026266 0%,#00707a 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(left,  #026266 0%,#00707a 100%); /* IE10+ */
-    background: linear-gradient(to right,  #026266 0%,#00707a 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#026266', endColorstr='#00707a',GradientType=1 ); /* IE6-9 */
 }
 
 #sidebar-wrapper {
@@ -81,12 +141,6 @@
     width: 250px;
 }
 
-#page-content-wrapper {
-    width: 100%;
-    position: absolute;
-    padding: 10px;
-}
-
 #wrapper.toggled #page-content-wrapper {
     position: absolute;
     margin-right: -250px;
@@ -101,16 +155,6 @@
     margin: 0;
     padding: 0;
     list-style: none;
-}
-.logo-image {
-    margin-top: 50px;
-    margin-left: 30px;
-}
-.blog-image
-{
-    position: absolute;
-    margin-top: 50px;
-    margin-left: 50px;
 }
 
 @media(min-width:768px) {
@@ -147,23 +191,30 @@
 
 .navbar-default {
     background-color: #ffffff;
-    border-color: #ffffff;
+    border: 0 !important;
 }
-.navbar-default .navbar-brand {
-    color: #408080;
-}
-.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
-    color: #408080;
-}
+
 .navbar-default .navbar-text {
     color: #408080;
 }
+
 .navbar-default .navbar-nav > li > a {
     color: #408080;
 }
+
+#centered-background .navbar-default .navbar-nav > li > a {
+    color: #ffffff;
+}
+
+#centered-background .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color:#ffffff;
+}
+
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
     color: #408080;
 }
+
+
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
     color: #408080;
     background-color: #ffffff;

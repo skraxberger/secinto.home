@@ -1,11 +1,34 @@
 extends layout
 
 block body
-    #centered-wrapper
-        #centered-background
-            .gradient-box.secinto-gradient
-        #page-content-wrapper
-            .header-box.secinto-gradient.glowing-border
+    #centered-background
+        .gradient-box.secinto-gradient
+
+        .secinto-gradient.glowing-border.header-box
+                a(href="welcome")
+                    img.logo-image-other(src="img/logo-horizontal.png")
+                a.pull-right(href="#")
+                    img.blog-image-other(src="img/blog-medium.png")
+        .navbar.navbar-default.nav-box.glowing-border.secinto-gradient-inverse(role="navigation")
+            .navbar-header
+                button.navbar-toggle(type="button", data-toggle="collapse", data-target=".navbar-ex1-collapse")
+                    span.sr-only Toggle navigation
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+            .collapse.navbar-collapse.navbar-ex1-collapse
+                ul.nav.navbar-nav
+                    li.navbar-space
+                        a.theme-text-other(href="welcome") willkommen
+                    li.navbar-space
+                        a.theme-text-other(href="services") leistungen
+                    li.navbar-space
+                        a.theme-text-other(href="news") neuigkeiten
+                    li.navbar-space
+                        a.theme-text-other(href="legal") impressum
+        .content-box
+            .negative-container
+        .content-box
             .container
                 div(ng-controller='AppController as AppCtrl')
                     div(ng-view)
