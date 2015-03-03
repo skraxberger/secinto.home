@@ -8,8 +8,6 @@ var express = require('express'),
     path = require('path'),
     http = require('http'),
     https = require('https'),
-    api = require('./routes/api'),
-    routes = require('./routes'),
     fs = require('fs'),
     cookieParser = require('cookie-parser'),
     bodyParser = require('body-parser'),
@@ -39,24 +37,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 // Routes
-app.get('/', routes.index);
-app.get('/partial/:name', routes.partial);
-
-// JSON API
-app.get('/api/name', api.name);
-
-// redirect all others to the index (HTML5 history)
-app.get('*', routes.index);
+require('./routes/routes')(app);
 
 /**
 * Start Server
 */
 
-
-
 var privateKey  = fs.readFileSync('security/ssl.key', 'utf8');
 var certificate = fs.readFileSync('security/ssl.crt', 'utf8');
-
 var credentials = {key: privateKey, cert: certificate};
 
 // your express configuration here
