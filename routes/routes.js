@@ -18,6 +18,10 @@ module.exports = function (app) {
         res.render('index', {user: req.user});
     });
 
+    app.get('/other', function (req, res) {
+        res.render('other', {user: req.user});
+    });
+
     app.get('/partial/:name', function (req, res) {
         var name = req.params.name;
         res.render('partials/' + name, {user: req.user});
