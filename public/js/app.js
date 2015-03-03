@@ -2,10 +2,13 @@
 
 
 // Declare app level module which depends on filters, and services
-angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.directives','ngRoute']).
-  config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
-    $routeProvider.when('/view1', {templateUrl: 'partial/1', controller: MyCtrl1});
-    $routeProvider.when('/view2', {templateUrl: 'partial/2', controller: MyCtrl2});
-    $routeProvider.otherwise({redirectTo: '/view1'});
+var secintoApp = angular.module('secintoApp', ['ngRoute']);
+
+secintoApp.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
+    $routeProvider.when('/welcome', {templateUrl: 'partial/welcome'});
+    $routeProvider.when('/services', {templateUrl: 'partial/services'});
+    $routeProvider.when('/news', {templateUrl: 'partial/news'});
+    $routeProvider.when('/legal', {templateUrl: 'partial/legal'});
+    $routeProvider.otherwise({redirectTo: '/welcome'});
     $locationProvider.html5Mode(true);
-  }]);
+}]);

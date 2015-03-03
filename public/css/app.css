@@ -1,8 +1,166 @@
 /* app css stylesheet */
-
-body {
-  padding-top:70px;
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 
+#wrapper.toggled {
+    padding-left: 250px;
+}
 
-  
+.theme-text {
+    color: #006c7d;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #026266; /* Old browsers */
+    background: -moz-linear-gradient(left,  #026266 0%, #00707a 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#026266), color-stop(100%,#00707a)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  #026266 0%,#00707a 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #026266 0%,#00707a 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  #026266 0%,#00707a 100%); /* IE10+ */
+    background: linear-gradient(to right,  #026266 0%,#00707a 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#026266', endColorstr='#00707a',GradientType=1 ); /* IE6-9 */
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 10px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -250px;
+}
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.logo-image {
+    margin-top: 50px;
+    margin-left: 30px;
+}
+.blog-image
+{
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 250px;
+    }
+
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+        width: 250px;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+
+    #page-content-wrapper {
+        padding: 20px;
+        position: relative;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}
+
+.navbar-space {
+    margin-left: 100px;
+}
+
+.navbar-default {
+    background-color: #ffffff;
+    border-color: #ffffff;
+}
+.navbar-default .navbar-brand {
+    color: #408080;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+    color: #408080;
+}
+.navbar-default .navbar-text {
+    color: #408080;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #408080;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #408080;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    color: #408080;
+    background-color: #ffffff;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+    color: #408080;
+    background-color: #ffffff;
+}
+.navbar-default .navbar-toggle {
+    border-color: #ffffff;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: #ffffff;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #408080;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+    border-color: #408080;
+}
+.navbar-default .navbar-link {
+    color: #408080;
+}
+.navbar-default .navbar-link:hover {
+    color: #408080;
+}
+
+@media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: #408080;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #408080;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+        color: #408080;
+        background-color: #ffffff;
+    }
+}
