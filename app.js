@@ -35,6 +35,19 @@ app.use(session({secret: 'supernova', saveUninitialized: true, resave: true}));
 // Point to the directory which should be served for client side request
 app.use(express.static(path.join(__dirname, 'public')));
 
+var https_redirect = function() {
+
+    return function requireHTTPS(req, res, next) {
+        if (!req.secure) {
+            //FYI this should work for local development as well
+            return res.redirect('https://' + req.get('host') + req.url);
+        }
+        next();
+    }
+}
+
+
+app.use(https_redirect());
 
 // Routes
 require('./routes/routes')(app);
